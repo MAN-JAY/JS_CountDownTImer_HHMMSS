@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CountDownTimer</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <span class="container__title">CountDownTimer</span>
+
+      <div class="container__labels">
+        <p class="conatiner__labels--label">Hours</p>
+        <p class="conatiner__labels--label">Minutes</p>
+        <p class="conatiner__labels--label">Seconds</p>
+      </div>
+
+      <div class="container__inputs">
+        <input
+          type="number"
+          maxlength="2"
+          oninput="this.value=this.value.slice(0,2)"
+          class="container__inputs--time hour"
+          placeholder="00"
+        />
+        <p class="container__inputs--colon">:</p>
+        <input
+          type="number"
+          maxlength="2"
+          oninput="this.value=this.value.slice(0,2)"
+          class="container__inputs--time minute"
+          placeholder="00"
+        />
+        <p class="container__inputs--colon">:</p>
+        <input
+          type="number"
+          maxlength="2"
+          oninput="this.value=this.value.slice(0,2)"
+          class="container__inputs--time sec"
+          placeholder="00"
+        />
+      </div>
+      <div class="container__btns">
+        <button class="btn start">Start</button>
+        <button class="btn stop">Stop</button>
+        <button class="btn reset">Reset</button>
+      </div>
+    </div>
+
+    <script src="./index.mjs" type="module"></script>
+  </body>
+</html>
